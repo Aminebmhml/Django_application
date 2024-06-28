@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Jokes{% endblock %}</title>
+    <link rel="stylesheet" href="/jokes_project/jokes/static/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'jokes:signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'login' %}">Sign In</a></li>
+                <li><a href="{% url 'jokes:list_jokes' %}">List Jokes</a></li>
+                <li><a href="{% url 'jokes:create_joke' %}">Create Joke</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
